@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>홀짝 게임</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>홀짝 게임</h1>
+    <div id="status">라운드: <span id="round">1</span>/20</div>
+    <div id="score">점수: <span id="scoreVal">0</span>원</div>
+    <div id="message">버튼을 눌러 시작하세요.</div>
+
+    <div class="buttons">
+      <button id="oddBtn">홀</button>
+      <button id="evenBtn">짝</button>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="modal">
+      <h2>끝났습니다</h2>
+      <div class="final">총점: <span id="finalScore">0</span>원</div>
+      <div class="modal-buttons">
+        <button id="backBtn">돌아가기</button>
+        <button id="retryBtn">다시하기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
