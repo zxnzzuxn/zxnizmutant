@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우주인 | 부산 카페 지도</title>
+    <meta
+      name="description"
+      content="부산의 분위기 좋은 카페를 지역별로 탐색하는 우주인 사이트입니다."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="splash" id="splash">
+      <div class="splash-card">
+        <div class="brand-mark">
+          <div class="brand-icon">
+            <svg viewBox="0 0 220 220" aria-hidden="true">
+              <circle cx="110" cy="110" r="92" fill="url(#skyGlow)" />
+              <path d="M74 118 L96 84 L123 96 L142 72 L160 86 L138 116 L112 108 Z" fill="#ffffff" />
+              <path d="M92 128 C108 114 130 112 148 120" stroke="#ffe7a3" stroke-width="10" stroke-linecap="round" fill="none" />
+              <path d="M95 142 L74 170" stroke="#5f8bff" stroke-width="12" stroke-linecap="round" />
+              <path d="M128 142 L149 170" stroke="#5f8bff" stroke-width="12" stroke-linecap="round" />
+              <path d="M108 154 L116 176" stroke="#ffd166" stroke-width="10" stroke-linecap="round" />
+              <circle cx="84" cy="92" r="7" fill="#ffd166" />
+              <circle cx="156" cy="84" r="7" fill="#ffd166" />
+              <defs>
+                <linearGradient id="skyGlow" x1="26" y1="30" x2="190" y2="190" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#7fb4ff" />
+                  <stop offset="1" stop-color="#4f7cff" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <p class="brand-kicker">부산 카페 탐험</p>
+            <h1 class="splash-title">우주인</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-shell" id="appShell">
+      <header class="topbar">
+        <div class="brand">우주인</div>
+      </header>
+
+      <main class="content">
+        <section class="selection-stage" id="selectionStage">
+          <div class="prompt-card">
+            <p class="eyebrow">부산 테스트 서버</p>
+            <h2>어디 지역이신가요?</h2>
+            <p class="prompt-copy">
+              부산의 분위기 좋은 카페를 찾고 싶은 지역을 골라 주세요.
+            </p>
+            <div class="district-grid" id="districtGrid"></div>
+            <button class="confirm-button" id="confirmButton" type="button" disabled>
+              확인
+            </button>
+          </div>
+        </section>
+
+        <section class="map-stage hidden" id="mapStage">
+          <div class="map-panel">
+            <div class="map-header">
+              <div>
+                <p class="eyebrow">선택한 지역</p>
+                <h3 id="selectedDistrictTitle">지역</h3>
+              </div>
+              <p class="map-caption">부산 지도에서 해당 지역이 확대되어 보여집니다.</p>
+            </div>
+            <div class="map-frame">
+              <div class="kakao-map-frame">
+                <iframe
+                  id="kakaoMapFrame"
+                  class="kakao-map-iframe"
+                  title="카카오 지도"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  src="https://map.kakao.com/link/map/부산%20카페,35.1795543,129.0756416"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <aside class="restaurant-panel" id="restaurantPanel">
+            <div class="restaurant-header">
+              <p class="eyebrow">추천 식당</p>
+              <h3>이 지역의 카페 탐방 포인트</h3>
+            </div>
+            <div class="restaurant-list" id="restaurantList"></div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
